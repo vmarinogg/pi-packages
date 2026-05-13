@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.DS_Store
+*.log
+
+# MOM (generated at runtime)
+.mom/
+.mcp.json
+.mcp.json.bkp
+.claude/
+CLAUDE.md
+AGENTS.md
+.pi/
