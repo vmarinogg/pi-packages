@@ -1,0 +1,40 @@
+name: Publish to npm
+
+on:
+  push:
+    tags:
+      - "*/v*"   # e.g. pi-mlx-models/v0.1.5
+
+jobs:
+  publish:
+    runs-on: macos-latest
+    permissions:
+      contents: read
+      id-token: write  # for npm provenance
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Resolve package from tag
+        id: pkg
+        run: |
+          # Tag format: pi-mlx-models/v0.1.5  →  workspace = pi-mlx-models
+          TAG="${{ github.ref_name }}"
+          WORKSPACE="${TAG%/v*}"
+          echo "workspace=$WORKSPACE" >> "$GITHUB_OUTPUT"
+
+      - name: Build
+        run: npm run build -w ${{ steps.pkg.outputs.workspace }}
+
+      - name: Publish
+        run: npm publish -w ${{ steps.pkg.outputs.workspace }} --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
