@@ -26,17 +26,17 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vmarinogg/pi-packages.git",
-    "directory": "packages/pi-mlx-models"
+    "directory": "pi-mlx-models"
   },
   "bugs": {
     "url": "https://github.com/vmarinogg/pi-packages/issues"
   },
-  "homepage": "https://github.com/vmarinogg/pi-packages/tree/main/packages/pi-mlx-models#readme",
+  "homepage": "https://github.com/vmarinogg/pi-packages/tree/main/pi-mlx-models#readme",
   "pi": {
     "extensions": [
       "dist/index.js"
     ],
-    "image": "https://raw.githubusercontent.com/vmarinogg/pi-packages/main/packages/pi-mlx-models/assets/preset-selector.png"
+    "image": "https://raw.githubusercontent.com/vmarinogg/pi-packages/main/pi-mlx-models/assets/preset-selector.png"
   },
   "peerDependencies": {
     "@mariozechner/pi-coding-agent": "*"

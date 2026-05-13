@@ -2,7 +2,7 @@
   "name": "pi-packages",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "pi-*"
   ],
   "scripts": {
     "build": "npm run build --workspaces",
