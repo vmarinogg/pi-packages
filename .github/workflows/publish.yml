@@ -36,5 +36,3 @@ jobs:
 
       - name: Publish
         run: npm publish -w ${{ steps.pkg.outputs.workspace }} --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
