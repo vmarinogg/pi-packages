@@ -1,4 +1,4 @@
-# @momhq/pi-mom
+# pi-mom
 
 Native Pi extension for [MOM (Memory Oriented Machine)](https://github.com/momhq/mom).
 
@@ -7,7 +7,7 @@ Registers MOM's MCP tools directly as native Pi tools — `mom_recall`, `mom_sta
 ## Installation
 
 ```bash
-pi install npm:@momhq/pi-mom
+pi install npm:pi-mom
 ```
 
 Or let `mom init` handle it automatically when it detects Pi in your project.
