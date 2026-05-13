@@ -32,7 +32,7 @@ jobs:
           echo "workspace=$WORKSPACE" >> "$GITHUB_OUTPUT"
 
       - name: Build
-        run: npm run build -w ${{ steps.pkg.outputs.workspace }}
+        run: npm run build --if-present -w ${{ steps.pkg.outputs.workspace }}
 
       - name: Publish
         run: npm publish -w ${{ steps.pkg.outputs.workspace }} --provenance --access public

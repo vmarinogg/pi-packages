@@ -1,0 +1,41 @@
+{
+  "name": "@momhq/pi-mom",
+  "version": "0.1.0",
+  "description": "MOM native Pi extension — registers MOM tools directly in the Pi coding agent",
+  "type": "module",
+  "files": [
+    "extensions",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "pi-package",
+    "mom",
+    "mcp",
+    "memory",
+    "skills",
+    "agent-memory"
+  ],
+  "author": "vmarinogg",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmarinogg/pi-packages.git",
+    "directory": "pi-mom"
+  },
+  "bugs": {
+    "url": "https://github.com/vmarinogg/pi-packages/issues"
+  },
+  "homepage": "https://github.com/vmarinogg/pi-packages/tree/main/pi-mom#readme",
+  "pi": {
+    "extensions": [
+      "extensions/mom-tools.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*"
+  },
+  "dependencies": {
+    "typebox": "*"
+  }
+}
