@@ -1,5 +1,5 @@
 {
-  "name": "@momhq/pi-mom",
+  "name": "pi-mom",
   "version": "0.1.0",
   "description": "MOM native Pi extension — registers MOM tools directly in the Pi coding agent",
   "type": "module",
