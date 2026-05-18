@@ -4,6 +4,13 @@ Native Pi extension for [MOM (Memory Oriented Machine)](https://github.com/momhq
 
 Registers MOM's MCP tools directly as native Pi tools — `mom_recall`, `mom_status`, `mom_record`, and more — so the LLM can call them without going through the generic MCP gateway.
 
+Also packages MOM's user-invocable skills for skills.sh:
+
+- `/mom-status` — check MOM health and vault state
+- `/mom-recall <query>` — search persistent memory
+- `/mom-project` — bind the current directory to a MOM project id for scoped memory
+- `/mom-wrap-up` — review and curate draft memories
+
 ## Installation
 
 ```bash
